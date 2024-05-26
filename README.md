@@ -5,3 +5,13 @@
 ## Ansible vs Terraform
 
 Ansible and Terraform are both powerful tools used for automation in IT environments, but they serve different purposes and have distinct features. Ansible is better at managing configuration while Terraform is more suited for infrastructure provisioning. Therefore, it is very common to see both tools being used together in a complementary manner to achieve comprehensive automation across the entire IT stack.
+
+## Installation
+
+To install Ansible, you can use the package manager of your choice. For example, on MacOS, you can install Ansible using the following command:
+
+```bash
+brew install ansible
+```
+
+Please, refer to the official [Ansible documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) for detailed installation instructions on different operating systems.
