@@ -16,6 +16,18 @@ brew install ansible
 
 Please, refer to the official [Ansible documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) for detailed installation instructions on different operating systems.
 
+## Ansible Playbooks
+
+Ansible playbooks are YAML files that define a series of tasks to be executed by Ansible on remote hosts. They are used to automate configuration management, application deployment, and other IT tasks. Playbooks are written in a human-readable format, making them easy to understand and maintain. You can find an example of a simple Ansible playbook in the `playbook.yaml` file in this repository.
+
+## Ansible Galaxy
+
+[Ansible Galaxy](https://galaxy.ansible.com/) is a hub for finding, reusing, and sharing Ansible content. It contains thousands of roles, playbooks, and collections contributed by the Ansible community. You can search for content based on your requirements and easily integrate it into your automation workflows. Ansible Galaxy helps accelerate development by providing pre-built solutions that can be customized and extended to meet your specific needs.
+
+In this repo, Ansible Galaxy is being used to separate the playbooks into roles which can be found in the `roles` directory.
+
+````bash
+
 ## Running Locally
 
 1. Clone the repository
@@ -25,7 +37,7 @@ Please, refer to the official [Ansible documentation](https://docs.ansible.com/a
    ```bash
    docker exec -it node-0x bash
    service ssh start
-   ```
+````
 
 1. Access the `control` container and generate the SSH key
 
