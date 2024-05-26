@@ -8,3 +8,15 @@ services:
     hostname: control
     volumes:
       - .:/root/ansible
+
+  node-01:
+    build: .
+    container_name: node-01
+    command: ['tail', '-f', '/dev/null']
+    hostname: node-01
+
+  node-02:
+    build: .
+    container_name: node-02
+    command: ['tail', '-f', '/dev/null']
+    hostname: node-02

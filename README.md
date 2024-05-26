@@ -15,3 +15,27 @@ brew install ansible
 ```
 
 Please, refer to the official [Ansible documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) for detailed installation instructions on different operating systems.
+
+## Running Locally
+
+1. Clone the repository
+1. Run `docker compose up -d`
+1. Access the `node-01` and `node-02` containers and start the SSH service
+
+   ```bash
+   docker exec -it node-0x bash
+   service ssh start
+   ```
+
+1. Access the `control` container and generate the SSH key
+
+   ```bash
+   docker exec -it control bash
+   ssh-keygen
+   ```
+
+1. Copy the SSH key to the `node-01` and `node-02` containers
+
+   ```bash
+   ssh-copy-id -i ~/.ssh/id_rsa.pub root@node-0x
+   ```
