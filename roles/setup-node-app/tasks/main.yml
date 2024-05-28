@@ -1,0 +1,35 @@
+---
+- name: Install libraries
+  apt:
+    pkg:
+      - nginx
+      - nodejs
+      - npm
+    state: present
+    update_cache: yes
+- name: Init nginx
+  service:
+    name: nginx
+    state: started
+- name: Create /app directory
+  file:
+    path: /app
+    state: directory
+- name: Copy package.json
+  copy:
+    src: package.json
+    dest: /app/package.json
+- name: Install dependencies
+  npm:
+    path: /app
+    state: present
+- name: Copy index.js
+  template:
+    src: index.js.j2
+    dest: /app/index.js
+- name: Start the application
+  command:
+    chdir: /app
+    cmd: node server
+  async: 1000
+  poll: 0

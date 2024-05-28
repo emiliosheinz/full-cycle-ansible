@@ -51,3 +51,9 @@ In this repo, Ansible Galaxy is being used to separate the playbooks into roles 
    ```bash
    ssh-copy-id -i ~/.ssh/id_rsa.pub root@node-0x
    ```
+
+1. Run the Ansible playbook
+
+   ```bash
+   ansible-playbook -i hosts ./roles/main.yaml
+   ```

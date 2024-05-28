@@ -3,6 +3,7 @@ version: '3'
 services:
   control:
     build: .
+    privileged: true
     container_name: control
     command: ['tail', '-f', '/dev/null']
     hostname: control
@@ -11,12 +12,14 @@ services:
 
   node-01:
     build: .
+    privileged: true
     container_name: node-01
     command: ['tail', '-f', '/dev/null']
     hostname: node-01
 
   node-02:
     build: .
+    privileged: true
     container_name: node-02
     command: ['tail', '-f', '/dev/null']
     hostname: node-02
