@@ -30,6 +30,6 @@
 - name: Start the application
   command:
     chdir: /app
-    cmd: node server
+    cmd: node index.js
   async: 1000
   poll: 0
