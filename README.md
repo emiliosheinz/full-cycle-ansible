@@ -26,8 +26,6 @@ Ansible playbooks are YAML files that define a series of tasks to be executed by
 
 In this repo, Ansible Galaxy is being used to separate the playbooks into roles which can be found in the `roles` directory.
 
-````bash
-
 ## Running Locally
 
 1. Clone the repository
@@ -37,7 +35,7 @@ In this repo, Ansible Galaxy is being used to separate the playbooks into roles 
    ```bash
    docker exec -it node-0x bash
    service ssh start
-````
+   ```
 
 1. Access the `control` container and generate the SSH key
 
