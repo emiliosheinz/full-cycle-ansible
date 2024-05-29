@@ -16,6 +16,8 @@ services:
     container_name: node-01
     command: ['tail', '-f', '/dev/null']
     hostname: node-01
+    ports:
+      - 8080:80
 
   node-02:
     build: .
@@ -23,3 +25,5 @@ services:
     container_name: node-02
     command: ['tail', '-f', '/dev/null']
     hostname: node-02
+    ports:
+      - 8081:80

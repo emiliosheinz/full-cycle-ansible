@@ -33,3 +33,8 @@
     cmd: node index.js
   async: 1000
   poll: 0
+- name: Copy nginx.conf
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/sites-available/default
+  notify: Reload nginx

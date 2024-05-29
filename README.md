@@ -53,5 +53,7 @@ In this repo, Ansible Galaxy is being used to separate the playbooks into roles 
 1. Run the Ansible playbook
 
    ```bash
-   ansible-playbook -i hosts ./roles/main.yaml
+   cd /root/ansible && ansible-playbook -i hosts ./roles/main.yaml
    ```
+
+And you should be able to access http://localhost:8080 or http://localhost:8081 to see the the node app response.

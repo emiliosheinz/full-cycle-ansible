@@ -1,2 +1,3 @@
 ---
 greeting: 'Hello Full Cycle!!!'
+app_url: 'http://localhost:3000'
